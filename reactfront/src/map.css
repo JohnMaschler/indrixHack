@@ -1,15 +1,12 @@
-/* map.css */
-/* Add this to your CSS file */
+//map.css
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 @import url("https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&v=3.exp&libraries=geometry,drawing,places");
 
-/* Set styles for the container element that holds the map */
 #map-container {
-    height: 100%; /* Adjust the height according to your needs */
+    height: 100%; 
     width:  100%;
   }
   
-  /* Ensure the map takes up 100% of the container's height */
   #map {
     height: 100%;
     width: 100%;
