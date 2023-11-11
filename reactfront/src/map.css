@@ -1,4 +1,4 @@
-/* styles.css */
+/* map.css */
 /* Add this to your CSS file */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 @import url("https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&v=3.exp&libraries=geometry,drawing,places");
