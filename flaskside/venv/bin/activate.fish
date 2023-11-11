@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/jmasch/Downloads/flutterflask/flaskside/venv"
+set -gx VIRTUAL_ENV "/Users/aryap/indrixHack/flaskside/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
