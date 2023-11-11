@@ -1,8 +1,6 @@
 // index.js
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './map.css'; // Import the CSS file
-import MyMapComponent from './map'; // Adjust the import
+import App from './App'; // Import the App component
 
-ReactDOM.render(<MyMapComponent />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
