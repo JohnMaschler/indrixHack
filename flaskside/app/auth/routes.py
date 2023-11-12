@@ -1,4 +1,5 @@
-from flask import render_template, redirect, url_for, flash
+from flask import Flask, render_template, redirect, url_for, flash, jsonify
+
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import db, login_manager
@@ -10,6 +11,10 @@ from app.models import User
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+@auth_bp.route('/test')
+def test_route():
+    return jsonify(message="Hello, World!")
+
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
@@ -20,10 +25,10 @@ def register():
         db.session.add(new_user)
         db.session.commit()
 
-        flash('Your account has been created! You can now log in.', 'success')
-        return redirect(url_for('auth.login'))
+        return jsonify(message='Your account has been created! You can now log in.'), 200
 
-    return render_template('register.html', form=form)
+    return jsonify(errors=form.errors), 400
+
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -47,3 +52,4 @@ def logout():
     logout_user()
     flash('You have been logged out.', 'success')
     return redirect(url_for('main.index'))
+
