@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Register from './components/Register';
-import Login from './components/Login';
+import Signin from './components/Signin';
 import Map from './map'; // Adjust the import
+import Home from './components/Home';
+import Incident from './components/Incident';
 import './App.css'; // Adjust the path to match the location of your CSS file
 
 
@@ -20,10 +21,10 @@ function App() {
             <Link to="/map">Map</Link>
           </li>
           <li>
-            <Link to="/register">Register</Link>
+            <Link to="/Sign-in">Register</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/incident">incidents</Link>
           </li>
         </ul>
       </nav>
@@ -34,17 +35,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Signin />} />
+          <Route path="/incident" element={<Incident />}/>
         </Routes>
 
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 export default App;
