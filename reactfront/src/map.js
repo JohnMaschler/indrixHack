@@ -58,7 +58,7 @@ const Map = () => {
 
   const calculateDirections = (origin, destination, stopovers) => {
     const directionsService = new window.google.maps.DirectionsService({
-      apiKey: 'AIzaSyDy_Ttv3H6inWRBR8btYRSmFzFWPU4oDy4', // Replace with your Routes API key
+      apiKey: 'AIzaSyDy_Ttv3H6inWRBR8btYRSmFzFWPU4oDy4', 
     });
 
     const waypoints = stopovers.map(stopover => ({ location: stopover, stopover: true }));
@@ -114,7 +114,7 @@ const Map = () => {
     <div>
     <GasEstimator totalDistance={totalDistance} />
     <LoadScript
-      googleMapsApiKey="AIzaSyDdIrXwXBDILYUAqBONwIbBmwAAObOgmKA" // Replace with your Google Maps API key for map-related functionality
+      googleMapsApiKey="AIzaSyDdIrXwXBDILYUAqBONwIbBmwAAObOgmKA" 
       libraries={['places', 'directions']}
     >
       <input
